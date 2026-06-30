@@ -31,6 +31,18 @@
             background-size: cover;
             background-position: center;
         }
+        /* Animação do botão flutuante */
+        .floating-chat {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 100;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
     </style>
 </head>
 <body class="text-gray-100 min-h-screen flex flex-col justify-between bg-ff-texture">
@@ -149,6 +161,11 @@
 
     </main>
 
+    <a href="https://discord.gg/SEU-LINK-AQUI" target="_blank" class="floating-chat bg-[#00ff66] hover:bg-[#00cc52] text-black font-extrabold p-4 rounded-full shadow-2xl flex items-center gap-3 transition-all duration-300 border-2 border-white/20">
+        <i data-lucide="message-circle-question" class="w-7 h-7 animate-pulse"></i>
+        <span class="hidden md:inline pr-2 tracking-wide">SUPORTE & CHAT ONLINE</span>
+    </a>
+
     <section id="comunidade" class="w-full bg-[#161821] py-12 border-t border-gray-800 mt-10">
         <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="space-y-1">
@@ -177,7 +194,6 @@
         lucide.createIcons();
         
         function irParaPagamento() {
-            // ⚠️ COLE AQUI O LINK DA SUA PÁGINA DO REPLIT (Ex: https://xxxx.replit.dev/)
             window.location.href = "https://9ea5bba1-7d31-49b0-9432-7ba5d992117f-00-2rhi5yqb4jmoz.worf.replit.dev/";
         }
 
